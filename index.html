@@ -1,0 +1,63 @@
+<!--
+  MIT License
+  Copyright (c) 2024 YourName
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=480, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>テトリス - カラフルJS実装</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>テトリス</h1>
+  <div class="container">
+    <canvas id="field" width="480" height="960" tabindex="0"></canvas>
+    <div class="panel">
+      <div class="scoreboard">
+        <div>スコア: <span id="score">0</span></div>
+        <div>レベル: <span id="level">1</span></div>
+        <div>ライン: <span id="lines">0</span></div>
+      </div>
+      <canvas id="next" width="160" height="80"></canvas>
+      <button id="restart" style="margin-top:2em;display:none;">リスタート</button>
+      <button id="pause" style="margin-top:1em;">⏸ 一時停止</button>
+      <div class="howto" style="margin-top:2em; text-align:left; font-size:0.95em; color:#ccc;">
+        <strong>操作方法</strong><br>
+        <u>キーボード</u><br>
+        ← →：左右移動<br>
+        ↑：回転<br>
+        ↓：ソフトドロップ<br>
+        Space：ハードドロップ<br>
+        <u>スマホ</u><br>
+        下部ボタンで操作
+      </div>
+      <button id="bgm-toggle" style="margin-top:1em;">♪ BGM ON/OFF</button>
+    </div>
+  </div>
+  <div class="touch-controls">
+    <button class="touch-btn" id="left">←</button>
+    <button class="touch-btn" id="right">→</button>
+    <button class="touch-btn" id="rotate">⟳</button>
+    <button class="touch-btn" id="down">↓</button>
+    <button class="touch-btn" id="drop">⎇</button>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+</html>

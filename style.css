@@ -1,0 +1,119 @@
+/*
+  MIT License
+  Copyright (c) 2024 YourName
+*/
+:root {
+  --bg: #222831;
+  --panel: #393e46;
+  --border: #eeeeee;
+  --text: #eeeeee;
+  --ghost: #cccccc15;
+  --I: #00eaff;
+  --O: #ffe600;
+  --T: #b366ff;
+  --S: #4cff4c;
+  --Z: #ff4c4c;
+  --J: #4c6cff;
+  --L: #ffb84c;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+h1 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+.container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.panel {
+  background: var(--panel);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px #0004;
+}
+.scoreboard {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.scoreboard div {
+  margin: 0.5em 0;
+  font-size: 1.1em;
+  text-align: left;
+}
+#next {
+  margin-top: 1rem;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  display: block;
+}
+canvas#field {
+  background: var(--panel);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #0004;
+  display: block;
+}
+.touch-controls {
+  display: none;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
+}
+.touch-btn {
+  background: var(--panel);
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 0.7em;
+  font-size: 1.5em;
+  width: 3em;
+  height: 3em;
+  margin: 0 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px #0003;
+  touch-action: manipulation;
+  transition: background 0.1s;
+}
+.touch-btn:active {
+  background: #444a;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .panel {
+    min-width: unset;
+    width: 90vw;
+    margin-bottom: 1rem;
+  }
+  canvas#field {
+    width: 90vw !important;
+    height: 162vw !important;
+    max-width: 360px;
+    max-height: 648px;
+  }
+  #next {
+    width: 8em !important;
+    height: 4em !important;
+  }
+  .touch-controls {
+    display: flex;
+  }
+} 
